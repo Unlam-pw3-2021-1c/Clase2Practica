@@ -2,17 +2,17 @@
   "ordenes": [
     {
       "nroOrden": 1,
-      "Descripcion": "Canilla 3/4",
-      "Cantidad": 3,
-      "Precio": 200,
-      "Entregada": false
+      "descripcion": "Canilla 3/4",
+      "cantidad": 3,
+      "precio": 200,
+      "entregada": false
     },
     {
       "nroOrden": 2,
-      "Descripcion": "Manguera 3/4",
+      "descripcion": "Manguera 3/4",
       "Cantidad": 1,
-      "Precio": 100,
-      "Entregada": true
+      "precio": 100,
+      "entregada": true
     }
   ]
 }
