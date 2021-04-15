@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace Clase2Practica
 {
@@ -6,17 +10,7 @@ namespace Clase2Practica
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
-            //buscar archivo json
-
-            //parsear json
-
-            //filtrar ordenes sin entregar
-
-            //mostrar por pantalla
-
-
+            EjercicioLeerJson.Ejecutar();
         }
 
 
