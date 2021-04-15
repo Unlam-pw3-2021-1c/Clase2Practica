@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace Clase2Practica
 {
@@ -16,12 +18,18 @@ namespace Clase2Practica
             string jsonText = File.ReadAllText(@"..\.\..\..\..\ordenes.json");
 
             //parsear json
-            JsonRoot myDetails = JsonConvert.DeserializeObject<JsonRoot> (jsonText);
+            JsonRoot jsonObj = JsonConvert.DeserializeObject<JsonRoot> (jsonText);
 
             //filtrar ordenes sin entregar
-            
-            //mostrar por pantalla
+            List<Orden> ordenesSinEntregar = jsonObj.ordenes.Where(o => !o.entregada).ToList();
 
+            //mostrar por pantalla
+            Console.WriteLine("Las ordenes sin entregar son:");
+            Console.WriteLine("nroOrden, descripcion, cantidad, precio");
+            foreach (Orden orden in ordenesSinEntregar)
+            {
+                Console.WriteLine($"{orden.nroOrden}, {orden.descripcion}, {orden.cantidad}, {orden.precio}");
+            }
 
         }
 
